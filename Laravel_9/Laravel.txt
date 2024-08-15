@@ -1,0 +1,50 @@
+Laravel
+
+>php artisan serve
+
+compile 
+> php artisan view:cache //optimize template -- agar laravel tidak perlu kompilasi ulang
+> php artisan view:clear
+
+membuat project
+> composer create-project laravel/laravel=v10.0.3 belajar-laravel-collection
+
+ambil dari github
+1. git clone [http] nama_folder
+2. .env.example jadi .env
+3. composer update
+4. php artisan key:generate [isi key]
+
+database:
+$ php artisan db:seed --class=UserSeeder
+$ php artisan test --migrate-configuration
+
+predis - redis
+>composer require predis/predis
+
+migration
+>php artisan migrate (update yg dibikin saja)
+>php artisan migrate:rollback (mengembalikan tabel seperti semula)
+>>php artisan migrate:fresh (drop baru dibikin kembali tabel"nya| rollback->migrate)
+
+
+buat model dan migrasi
+>php artisan make:model -m Post
+>php artisan make:model -m Category
+>php artisan migrate:fresh
+
+
+shortcut
+ctrl + p = untuk mencari file, cth PostController.php
+
+
+DB Seeder
+>php artisan db:seed
+>php artisan migrate:fresh --seed (migrate fresh -> seed)
+
+Factory
+> php artisan make:factory PostFactory
+
+
+Clockword
+>composer require itsgoingd/clockwork
